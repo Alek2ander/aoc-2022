@@ -16,3 +16,17 @@ with open('09.txt', 'r') as in_file:
 
 print(sum_1)
 print(sum_2)
+
+# But hey this also works
+#
+# from numpy.polynomial import Polynomial
+#
+# with open('09.txt', 'r') as in_file:
+#     sum_1 = sum_2 = 0
+#     for line in in_file:
+#         values = [int(x) for x in line.rstrip().split()]
+#         poly = Polynomial.fit(range(len(values)), values, len(values) - 1)
+#         sum_1, sum_2 = sum_1 + round(poly(len(values))), sum_2 + round(poly(-1))
+#
+# print(sum_1)
+# print(sum_2)
