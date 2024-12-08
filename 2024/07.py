@@ -37,8 +37,8 @@ with open('07.txt', 'r') as in_file:
         (left, *middle), right = map(int, operand_line.split()), int(result)
         if check_reachable(left, middle, right, (add, mul), (sub, r_mul)):
             sum_1 += right
-        if check_reachable(left, middle, right, (add, mul, concat), (sub, r_mul, r_concat)):
+        elif check_reachable(left, middle, right, (add, mul, concat), (sub, r_mul, r_concat)):
             sum_2 += right
 
 print(sum_1)
-print(sum_2)
+print(sum_1 + sum_2)
