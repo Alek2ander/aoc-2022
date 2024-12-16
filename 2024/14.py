@@ -1,4 +1,3 @@
-import curses
 import math
 import re
 
@@ -27,7 +26,7 @@ print(math.prod(pattern))
 # Time to look for anomalies.
 # On my input, I found 2 anomalies repeating with max_x and max_y intervals.
 # Using the Chinese Remainder Theorem, you can find where the anomalies meet.
-# 
+#
 # i = 0
 # while i < max_x * max_y:
 #     i += 1
