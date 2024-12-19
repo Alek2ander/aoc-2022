@@ -16,9 +16,7 @@ def a_star(a, b, obstacles):
             continue
         done.add(pos)
         for x1, y1 in ((pos[0], pos[1] - 1), (pos[0] + 1, pos[1]), (pos[0], pos[1] + 1), (pos[0] - 1, pos[1])):
-            if x1 < 0 or x1 > max_x or y1 < 0 or y1 > max_y:
-                continue
-            if (pos1 := (x1, y1)) in done or pos1 in obstacles:
+            if x1 < 0 or x1 > max_x or y1 < 0 or y1 > max_y or (pos1 := (x1, y1)) in done or pos1 in obstacles:
                 continue
             heappush(queue, (steps + 1 + abs(pos1[0] - b[0]) + abs(pos1[1] - b[1]), steps + 1, pos1))
     return None
